@@ -1,0 +1,384 @@
+/* ========== GOOGLE FONTS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/*========== RESET CSS ==========*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* ========== VARIABLES CSS ========== */
+:root{
+    --header-height: 2.5rem;
+
+  /*========== Colors ==========*/
+  --first-color: #6f4e37;
+  --first-color-alt: #805a3f;
+  --title-color: #3c2a1e;
+  --text-color: #707070;
+  --text-color-light: #A6A6A6;
+  --body-color: #FBFEFD;
+  --container-color: #FFFFFF;
+  --shadow-color: #969696;
+  --shadow-color-soft: #d6d6d6;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --dancing-script-font: 'Dancing Script', serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-thin: 100;
+  --font-regular: 400;
+  --font-bold: 700;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  --mb-7: 3.5rem;
+  --mb-8: 4rem;
+  --mb-9: 4.5rem;
+  --mb-10: 5rem;
+  --mb-11: 5.5rem;
+  --mb-12: 6rem;
+  --mb-13: 6.5rem;
+  --mb-14: 7rem;
+}
+
+body{
+    background-color: var(--body-color);
+    /* margin: var(--header-height) 0 0 0; */
+    line-height: 1.6;   
+}
+
+/*========== HEADER ==========*/
+.header{
+    margin: 0 auto;
+    padding: var(--mb-1) var(--mb-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-color);
+    box-shadow: 0 0 5px var(--shadow-color);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.header .header-container{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .header-container .header-titles a{
+    text-decoration: none;
+}
+.header .header-container .header-titles a h1{
+    color: var(--first-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-regular);
+}
+.header .header-container .header-items ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header .header-container .header-items ul li{
+    padding: var(--mb-2) var(--mb-2);
+}
+.header .header-container .header-items ul li .header-item{
+    text-decoration: none;
+    color: var(--title-color);
+    font-size: 17px;
+    font-family: var(--body-font);
+    border: 2px solid transparent;
+    padding: .2rem;
+}
+.header .header-container .header-items ul li .header-item:hover{
+    color: var(--first-color);
+    border-bottom-color: var(--first-color);
+}
+
+/*========== HOME ==========*/
+.home{
+    height: 100vh;
+    margin: 0 auto;
+    padding: var(--mb-8) 0 0 0; /* Home üstündeki boşluk */
+}
+.home .home-container{
+    height: calc(100vh - var(--mb-4));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home .home-container .home-content{
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.home .home-container .home-content .home-title h1{
+    color: var(--first-color);
+    font-family: var(--dancing-script-font);
+    font-size: 60px;
+}
+.home .home-container .home-content .home-description h2{
+    color: var(--title-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-regular);
+    font-size: 45px;
+}
+.home .home-container .home-content a{
+    color: #fff;
+    background-color: var(--first-color-alt);
+    text-decoration: none;
+    font-family: var(--body-font);
+    letter-spacing: .5px;
+    border-radius: 5px;
+    padding: var(--mb-1) var(--mb-2);
+}
+.home .home-container .home-content a:hover{
+    background-color: var(--first-color);
+}
+.home .home-container .home-img{
+    margin-left: var(--mb-14);
+}
+.home .home-container .home-img img{
+    width: 500px;
+    border-radius: 300px;
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+/*========== ABOUT ==========*/
+.about{
+    margin: 0 auto;
+    padding: var(--mb-8) 0 0 0;
+}
+.about .about-container{
+    height: calc(100vh - var(--mb-4));
+    padding: var(--mb-8) 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .about-container .about-img{
+    margin-right: var(--mb-14);
+}
+.about .about-container .about-img img{
+    height: 400px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    border-radius: 10px;
+}
+.about .about-container .about-content{
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.about .about-container .about-content .about-subtitle{
+    color: var(--first-color);
+    font-family: var(--body-font);
+}
+.about .about-container .about-content .about-title h2{
+    color: var(--title-color);
+    font-family: var(--body-font);
+    font-size: 35px;
+}
+.about .about-container .about-content .about-description p{
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: 15px;
+}
+.about .about-container .about-content a{
+    color: #fff;
+    font-size: 16px;
+    background-color: var(--first-color-alt);
+    text-decoration: none;
+    font-family: var(--body-font);
+    letter-spacing: .5px;
+    border-radius: 5px;
+    padding: var(--mb-1) var(--mb-2);
+}
+.about .about-container .about-content a:hover{
+    background-color: var(--first-color);
+}
+ 
+/*========== COFFEES (GRID) ==========*/
+.coffees{
+    margin: 0 auto;
+    padding: var(--mb-8) 0 0 0;
+}
+.coffees .coffees-container{
+    height: calc(100vh - var(--mb-4));
+    padding: var(--mb-6) 0 0 0;
+}
+.coffees .coffees-container .coffee-cards{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 180px);
+    grid-gap: 40px;
+}
+.coffees .coffees-container .coffee-cards .coffee-card{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    box-shadow: 0 0 7px var(--shadow-color-soft);
+    border: 1px solid transparent;
+    border-radius: 7px;
+    padding: var(--mb-1) var(--mb-1) var(--mb-2) var(--mb-1);
+}
+.coffees .coffees-container .coffee-cards .coffee-card img{
+    align-self: center;
+    width: 150px;
+}
+.coffees .coffees-container .coffee-cards .coffee-card h3{
+    color: var(--title-color);
+    font-family: var(--body-font);
+    font-size: 15px;
+    margin: var(--mb-2) 0 0 var(--mb-1);
+}
+.coffees .coffees-container .coffee-cards .coffee-card .coffee-detail{
+    color: var(--title-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-regular);
+    font-size: 14px;
+    margin: .3rem 0 0 var(--mb-1);
+}
+.coffees .coffees-container .coffee-cards .coffee-card .coffee-price{
+    color: var(--title-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
+    font-size: 14px;
+    margin: var(--mb-1) 0 0 var(--mb-1);
+}
+
+/*========== SHOP ==========*/
+
+/*========== GALLERY ==========*/
+
+/*========== CONTACT ==========*/
+.contact{
+    margin: 0 auto;
+    padding: var(--mb-8) 0 0 0;
+}
+.contact .contact-container{
+    height: calc(100vh - var(--mb-4));
+    /* padding: var(--mb-8) 0 0 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .contact-container .contact-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact .contact-container .contact-form-container .contact-subtitle{
+    color: var(--first-color);
+    font-family: var(--body-font);
+    align-self: flex-start;
+    padding: 0 0 var(--mb-1) 0;
+}
+.contact .contact-container .contact-form-container .contact-form{
+    justify-content: flex-start;
+}
+.contact .contact-container .contact-form-container .contact-form .form-control{
+    margin: var(--mb-2) 0;
+}
+.contact .contact-container .contact-form-container .contact-form .form-control label{
+    display: block;
+    font-family: var(--body-font);
+    font-size: 17px;
+    color: var(--title-color);
+    margin: .250rem 0 .250rem 0;
+}
+.contact .contact-container .contact-form-container .contact-form .form-control input{
+    display: block;
+    padding: var(--mb-1);
+    margin: 0 0 var(--mb-1) 0;
+    min-width: 250px;
+    font-family: var(--body-font);
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.contact .contact-container .contact-form-container .contact-form .form-control input:focus{
+    outline: 0;
+    border-color: var(--first-color);
+}
+.contact .contact-container .contact-form-container .contact-form .form-control textarea{
+    resize: none;
+    display: block;
+    padding: var(--mb-1);
+    margin: 0 0 var(--mb-1) 0;  
+    min-width: 250px;
+    font-family: var(--body-font);
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.contact .contact-container .contact-form-container .contact-form .form-control textarea:focus{
+    outline: 0;
+    border-color: var(--first-color);
+}
+.contact .contact-container .contact-form-container .contact-form button{
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    background-color: var(--first-color-alt);
+    text-decoration: none;
+    font-family: var(--body-font);
+    letter-spacing: .5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: var(--mb-1) var(--mb-2);
+    margin: var(--mb-2) auto;
+}
+.contact .contact-container .contact-form-container .contact-form button:hover{
+    background-color: var(--first-color);
+}
+
+/*========== FOOTER ==========*/
+.footer{
+    margin: 0 auto;
+    padding: var(--mb-8) 0 0 0;
+}
+.footer .footer-container{
+    height: var(--mb-10);
+    background-color: var(--first-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .footer-container .footer-copyright{
+    color: #ffffffbf;
+    font-size: 12px;
+    font-family: var(--body-font);
+    font-weight: var(--font-thin);
+    letter-spacing: .5px;
+}
